@@ -63,8 +63,11 @@ public class FXMLController {
     		return;
     	} else {
     		elenco.addParola(add);
-    		txtResult.setText(txtResult.getText() + add + "\n");
-    		txtParola.setText("");
+    		txtResult.setText("");
+    		for (String s: elenco.getElenco()) {
+	    		txtResult.setText(txtResult.getText() + s + "\n");
+	    		txtParola.setText("");
+    		}
     	}
     	
     	long end = System.nanoTime();
