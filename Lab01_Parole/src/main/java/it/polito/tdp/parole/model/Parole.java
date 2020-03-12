@@ -2,6 +2,7 @@ package it.polito.tdp.parole.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Parole {
 	private List<String> parole;
@@ -12,7 +13,8 @@ public class Parole {
 	
 	public void addParola(String p) {
 		this.parole.add(p);
-	}
+		Collections.sort(this.parole);
+		}
 	
 	public List<String> getElenco() {
 		return this.parole;

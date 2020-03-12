@@ -56,21 +56,22 @@ public class FXMLController {
     
     @FXML
     void doInsert(ActionEvent event) {
-    	long start = System.nanoTime();
+ 	long start = System.nanoTime();
     	
     	String add = txtParola.getText();
     	if (add.length() == 0) {
     		return;
     	} else {
     		elenco.addParola(add);
-    		txtResult.setText(txtResult.getText() + add + "\n");
-    		txtParola.setText("");
+    		txtResult.setText("");
+    		for (String s: elenco.getElenco()) {
+	    		txtResult.setText(txtResult.getText() + s + "\n");
+	    		txtParola.setText("");
+    		}
     	}
     	
     	long end = System.nanoTime();
     	txtAreaLog.appendText("inserimento: " + Long.toString(end - start) + "ns\n");
-
-
     }
 
     @FXML
