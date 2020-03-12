@@ -1,13 +1,13 @@
 package it.polito.tdp.parole.model;
 
 import java.util.List;
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Parole {
 	private List<String> parole;
 		
 	public Parole() {
-		this.parole = new ArrayList<String>();
+		this.parole = new LinkedList<String>();
 	}
 	
 	public void addParola(String p) {
@@ -19,7 +19,7 @@ public class Parole {
 	}
 	
 	public void reset() {
-		this.parole = new ArrayList<String>();
+		this.parole = new LinkedList<String>();
 	}
 	
 	public boolean cancella(String s) {
