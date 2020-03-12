@@ -21,5 +21,9 @@ public class Parole {
 	public void reset() {
 		this.parole = new ArrayList<String>();
 	}
+	
+	public boolean cancella(String s) {
+		return this.parole.remove(s);
+	}
 
 }
